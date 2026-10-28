@@ -20,7 +20,7 @@ pnpm-debug.log*
 .DS_Store
 Thumbs.db
 
-# Generated Assets (during Tier 2 generation)
-assets/cards/*.webp
-assets/cards/print/*.png
+# Generated Assets (approved assets are tracked in git)
+# assets/cards/*.webp
+# assets/cards/print/*.png
 !assets/cards/.gitkeep

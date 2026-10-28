@@ -202,7 +202,7 @@ def test_art_manifest_synchronization(deck_data, art_manifest_data):
     assert len(art_manifest_data["cards"]) == 80
 
     for entry in art_manifest_data["cards"]:
-        assert entry["art_status"] == "deferred", f"Art entry {entry['card_id']} status is not deferred"
+        assert entry["art_status"] in ("approved", "deferred"), f"Art entry {entry['card_id']} status is not approved or deferred"
         assert entry["aspect_ratio"] == "4:3", f"Art entry {entry['card_id']} aspect ratio is not 4:3"
         assert isinstance(entry["seed"], int), f"Art entry {entry['card_id']} seed must be an int"
         assert len(entry["prompt"]) >= 20, f"Art entry {entry['card_id']} prompt too brief"

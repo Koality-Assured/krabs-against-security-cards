@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Canonical 80-card incident response dataset, JSON schemas, and art manifest for Krabs Against Security",
   "main": "cards/core-v1/cards.json",
+  "exports": {
+    ".": "./cards/core-v1/cards.json",
+    "./cards": "./cards/core-v1/cards.json",
+    "./schemas/*": "./schemas/*",
+    "./art-manifest": "./art/art_manifest.json"
+  },
   "scripts": {
     "validate": "python tests/test_cards.py",
     "test": "pytest -v"

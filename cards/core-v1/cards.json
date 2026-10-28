@@ -1,0 +1,1648 @@
+{
+  "$schema": "../../schemas/deck-schema-v1.json",
+  "version": "1.0.0",
+  "deck_id": "core-v1",
+  "name": "Krabs Against Security Core Set v1",
+  "description": "Canonical 80-card incident response tabletop deck pairing undersea Krusty Krab SOC parody lore with authentic MITRE ATT&CK techniques and NIST SP 800-61r2 incident handling phases.",
+  "license": "CC BY-SA 4.0",
+  "attribution": "Based on Backdoors & Breaches by Black Hills Information Security (BHIS), licensed under CC BY-SA 4.0.",
+  "card_counts": {
+    "initial_compromise": 12,
+    "pivot_escalate": 12,
+    "persistence": 12,
+    "c2_exfil": 12,
+    "procedures": 16,
+    "injects": 16,
+    "total": 80
+  },
+  "cards": [
+    {
+      "id": "IC-001",
+      "slug": "spear-phishing-actual-chum",
+      "title": "Spear Phishing with Actual Chum",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-001",
+      "attack_technique_id": "T1566.001",
+      "attack_technique_name": "Spearphishing Attachment",
+      "description": "An urgent promotional email offering a 90% discount on bulk kelp flour arrives with an attached macro-enabled Excel sheet named 'invoice_october.xlsm'. When opened by an eager executive, it drops an obfuscated subsea PowerShell stager.",
+      "flavor_text": "\"Ninety percent off?! Eugene Krabs never turns down a bargain, even if the sender is pl4nkt0n@chumbucket.ru!\"",
+      "tags": [
+        "phishing",
+        "macro",
+        "social-engineering",
+        "initial-access"
+      ]
+    },
+    {
+      "id": "IC-002",
+      "slug": "unpatched-kelp-facing-server",
+      "title": "Unpatched Kelp-Facing Server",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-002",
+      "attack_technique_id": "T1190",
+      "attack_technique_name": "Exploit Public-Facing Application",
+      "description": "A legacy FreeBSD web server from 1999 hosting the Krusty Krab menu remains exposed to the open ocean internet without security updates, allowing Plankton to execute remote code via an unauthenticated buffer overflow.",
+      "flavor_text": "\"Why pay for security updates when the website has loaded fine since the Clinton administration?\"",
+      "tags": [
+        "rce",
+        "unpatched",
+        "legacy-server",
+        "public-facing"
+      ]
+    },
+    {
+      "id": "IC-003",
+      "slug": "salty-insider-oyster-ducky",
+      "title": "Salty Insider Oyster Ducky",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-003",
+      "attack_technique_id": "T1091",
+      "attack_technique_name": "Replication Through Removable Media",
+      "description": "A disgruntled, minimum-wage cashier plugs a malicious USB Rubber Ducky disguised as a polished oyster shell into the back of the primary POS cash register to charge a music player.",
+      "flavor_text": "\"I just wanted to charge my Clarinet MP3 player, Mr. Krabs! How was I supposed to know it typed 400 keystrokes a second?!\"",
+      "tags": [
+        "usb-ducky",
+        "insider-threat",
+        "removable-media",
+        "pos"
+      ]
+    },
+    {
+      "id": "IC-004",
+      "slug": "trench-floor-physical-intrusion",
+      "title": "Trench Floor Physical Intrusion",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-004",
+      "attack_technique_id": "T1200",
+      "attack_technique_name": "Direct Physical Access",
+      "description": "A microscopic threat actor physically crawls through the kitchen floor drainage conduit, bypassing the front door biometric lock, and clips a hardware packet sniffer directly onto the main server rack switch.",
+      "flavor_text": "\"Physical security policy stated all floor drains must have a two-cent mesh cover. Mr. Krabs substituted chicken wire.\"",
+      "tags": [
+        "physical-access",
+        "hardware-implant",
+        "drain-infiltration"
+      ]
+    },
+    {
+      "id": "IC-005",
+      "slug": "supply-chain-kelp-poisoning",
+      "title": "Supply Chain Kelp Poisoning",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-005",
+      "attack_technique_id": "T1195.002",
+      "attack_technique_name": "Supply Chain Compromise: Compromise Software Supply Chain",
+      "description": "Threat actors publish a malicious update to the popular open-source package '@krusty-delivery/pos-driver' on the subsea npm registry, embedding a backdoor that harvests payment credentials.",
+      "flavor_text": "\"Four lines of malicious JavaScript in a library that calculates delivery tip percentages. Elegantly devious.\"",
+      "tags": [
+        "supply-chain",
+        "npm",
+        "dependency-confusion",
+        "open-source"
+      ]
+    },
+    {
+      "id": "IC-006",
+      "slug": "default-credentials-fryer-scada",
+      "title": "Default Credentials on Fryer SCADA",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-006",
+      "attack_technique_id": "T1078.001",
+      "attack_technique_name": "Valid Accounts: Default Accounts",
+      "description": "The automated deep-fryer temperature controller was deployed with factory default credentials (admin/krabby123) exposed over unencrypted Modbus TCP on the internal restaurant network.",
+      "flavor_text": "\"Changing default passwords voids the warranty! Do you know how much a new thermistor controller costs?!\"",
+      "tags": [
+        "default-credentials",
+        "scada",
+        "iot",
+        "fryer"
+      ]
+    },
+    {
+      "id": "IC-007",
+      "slug": "drive-by-download-goo-lagoon",
+      "title": "Drive-by Download at Goo Lagoon",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-007",
+      "attack_technique_id": "T1189",
+      "attack_technique_name": "Drive-by Compromise",
+      "description": "An assistant manager browsing a popular beach weather forecast forum falls victim to a watering-hole drive-by download exploiting an unpatched web browser vulnerability to drop memory-resident shellcode.",
+      "flavor_text": "\"I only checked the surf report! Then the monitor started shooting bioluminescent purple sparks!\"",
+      "tags": [
+        "drive-by",
+        "browser-exploit",
+        "zero-day",
+        "goo-lagoon"
+      ]
+    },
+    {
+      "id": "IC-008",
+      "slug": "watering-hole-kelp-shake-stand",
+      "title": "Watering Hole at Kelp Shake Stand",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-008",
+      "attack_technique_id": "T1195.001",
+      "attack_technique_name": "Supply Chain Compromise: Compromise Software Dependencies and Development Tools",
+      "description": "Adversaries compromise the local online ordering portal of the popular Kelp Shake franchise frequented by Krusty Krab staff, poisoning downloadable order receipts with malicious macro payloads.",
+      "flavor_text": "\"Everyone drinks Kelp Shakes on Friday afternoon. Perfect place to poison both the drinks and the network perimeter.\"",
+      "tags": [
+        "watering-hole",
+        "kelp-shake",
+        "macro",
+        "credential-harvesting"
+      ]
+    },
+    {
+      "id": "IC-009",
+      "slug": "misconfigured-s3-coral-bucket",
+      "title": "Misconfigured S3 Coral Bucket",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-009",
+      "attack_technique_id": "T1530",
+      "attack_technique_name": "Data from Cloud Storage Object",
+      "description": "An AWS S3 cloud storage bucket named 'krusty-internal-confidential-recipes' was accidentally set to Public-Read during a late-night deployment to speed up branch synchronization.",
+      "flavor_text": "\"Public read access made the kitchen terminals sync so much faster! Who knew 'world' meant the entire ocean?!\"",
+      "tags": [
+        "cloud",
+        "s3",
+        "misconfiguration",
+        "data-leak"
+      ]
+    },
+    {
+      "id": "IC-010",
+      "slug": "vishing-the-eager-fry-cook",
+      "title": "Voice Phishing (Vishing) the Fry Cook",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-010",
+      "attack_technique_id": "T1566.004",
+      "attack_technique_name": "Spearphishing Voice",
+      "description": "An attacker posing as Undersea Corporate IT calls the kitchen line claiming an emergency patch is required for the digital spatula, tricking a naive fry cook into reciting their multi-factor push code.",
+      "flavor_text": "\"'Hello, this is Todd from IT. We need your six-digit MFA code to disinfect the digital spatula.' 'Golly, right away Todd!'\"",
+      "tags": [
+        "vishing",
+        "social-engineering",
+        "mfa-bypass",
+        "human-error"
+      ]
+    },
+    {
+      "id": "IC-011",
+      "slug": "exposed-coral-rdp-default-port",
+      "title": "Exposed Coral RDP on Default Port",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-011",
+      "attack_technique_id": "T1133",
+      "attack_technique_name": "External Remote Services",
+      "description": "Remote Desktop Protocol (TCP 3389) on the primary accounting workstation is routed directly through the gateway without VPN or brute-force lockouts so the owner can count coins from home.",
+      "flavor_text": "\"Why should I drive all the way to the restaurant on Sunday just to balance the nickel register?\"",
+      "tags": [
+        "rdp",
+        "port-3389",
+        "brute-force",
+        "remote-access"
+      ]
+    },
+    {
+      "id": "IC-012",
+      "slug": "leaked-shift-manager-credentials",
+      "title": "Leaked Shift Manager Credentials",
+      "deck": "initial_compromise",
+      "type": "initial_compromise",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-IC-012",
+      "attack_technique_id": "T1078.003",
+      "attack_technique_name": "Valid Accounts: Local Accounts",
+      "description": "A yellow sticky note with the administrative login 'Squidward123!' stuck to the front cashier monitor is photographed by a customer leaning over the counter and shared on undersea forums.",
+      "flavor_text": "\"I stuck it on the monitor so I wouldn't forget it! It's not my fault someone in booth three had a telescope!\"",
+      "tags": [
+        "sticky-note",
+        "credential-leak",
+        "password-hygiene",
+        "physical-spill"
+      ]
+    },
+    {
+      "id": "PE-001",
+      "slug": "pass-the-kelp-hash",
+      "title": "Pass-the-Kelp-Hash",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-001",
+      "attack_technique_id": "T1550.002",
+      "attack_technique_name": "Use Alternate Authentication Material: Pass the Hash",
+      "description": "Adversaries extract NTLM password hashes from LSASS memory on the cashier terminal and pass them to authenticate against the corporate formula vault without ever cracking the plaintext password.",
+      "flavor_text": "\"Who cares about cleartext passwords when legacy Windows authentication happily accepts pre-chewed kelp hashes?\"",
+      "tags": [
+        "pass-the-hash",
+        "ntlm",
+        "mimikatz",
+        "lateral-movement"
+      ]
+    },
+    {
+      "id": "PE-002",
+      "slug": "living-off-the-coral-lolbins",
+      "title": "Living Off the Coral (LOLBins)",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-002",
+      "attack_technique_id": "T1059.001",
+      "attack_technique_name": "Command and Scripting Interpreter: PowerShell",
+      "description": "Attackers leverage built-in administrative binaries (certutil.exe, wmic.exe, powershell.exe) to stage payloads and query Active Directory, evading basic signature-based antivirus.",
+      "flavor_text": "\"Why bring your own hacking tools when the Krusty Krab server comes pre-loaded with dozens of deadly binaries for free?\"",
+      "tags": [
+        "lolbins",
+        "powershell",
+        "wmi",
+        "defense-evasion"
+      ]
+    },
+    {
+      "id": "PE-003",
+      "slug": "anemone-unquoted-service-path",
+      "title": "Anemone Unquoted Service Path",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-003",
+      "attack_technique_id": "T1068",
+      "attack_technique_name": "Exploitation for Privilege Escalation",
+      "description": "A deep fryer monitoring service installed at 'C:\\Program Files\\Deep Fryer Pro\\FryerService.exe' lacks quotation marks, allowing a low-privilege attacker to plant 'C:\\Program.exe' running as NT AUTHORITY\\SYSTEM.",
+      "flavor_text": "\"A simple missing quotation mark is all that stands between an underpaid fry cook and complete server domination.\"",
+      "tags": [
+        "privilege-escalation",
+        "unquoted-path",
+        "system32",
+        "windows-service"
+      ]
+    },
+    {
+      "id": "PE-004",
+      "slug": "sponge-in-the-middle-sitm",
+      "title": "Sponge-in-the-Middle (SITM)",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-004",
+      "attack_technique_id": "T1557.002",
+      "attack_technique_name": "Adversary-in-the-Middle: ARP Cache Poisoning",
+      "description": "Adversaries flood the restaurant's unmanaged Ethernet switch with spoofed ARP responses, positioning an eavesdropping node directly between the ordering terminal and kitchen receipt printer.",
+      "flavor_text": "\"All order tickets are taking a scenic detour through table seven! Who ordered the Wireshark combo platter?!\"",
+      "tags": [
+        "mitm",
+        "arp-spoofing",
+        "packet-sniffing",
+        "unmanaged-switch"
+      ]
+    },
+    {
+      "id": "PE-005",
+      "slug": "kerberoasting-secret-formula-spn",
+      "title": "Kerberoasting the Secret Formula SPN",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-005",
+      "attack_technique_id": "T1558.003",
+      "attack_technique_name": "Steal or Forge Kerberos Tickets: Kerberoasting",
+      "description": "An authenticated domain user requests Kerberos service tickets for the service principal 'spn/formula-vault' and cracks the weak RC4 service account password offline on an underwater GPU rig.",
+      "flavor_text": "\"Requesting a ticket is completely legitimate protocol! Cracking the weak eight-character password on my GPU rig is where the fun begins.\"",
+      "tags": [
+        "kerberoasting",
+        "active-directory",
+        "spn",
+        "offline-cracking"
+      ]
+    },
+    {
+      "id": "PE-006",
+      "slug": "token-impersonation-rotten-tomato",
+      "title": "Token Impersonation via Rotten Tomato",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-006",
+      "attack_technique_id": "T1134.001",
+      "attack_technique_name": "Access Token Manipulation: Token Impersonation/Theft",
+      "description": "Leveraging SeImpersonatePrivilege on the IIS restaurant web service, attackers execute a potato-style privilege escalation exploit to kidnap a SYSTEM security token.",
+      "flavor_text": "\"Granting a web server permission to impersonate security tokens? Don't be surprised when it impersonates the King of the Ocean.\"",
+      "tags": [
+        "token-theft",
+        "juicy-potato",
+        "privilege-escalation",
+        "seimpersonate"
+      ]
+    },
+    {
+      "id": "PE-007",
+      "slug": "ad-trench-forest-compromise",
+      "title": "Active Directory Trench Forest Compromise",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-007",
+      "attack_technique_id": "T1078.002",
+      "attack_technique_name": "Valid Accounts: Domain Accounts",
+      "description": "Adversaries traverse a misconfigured two-way bidirectional forest trust between the low-security Bikini Bottom franchise domain and the high-security Secret Formula forest.",
+      "flavor_text": "\"Domain trusts are like underwater rope bridges: easy to build, impossible to defend, and catastrophic when severed.\"",
+      "tags": [
+        "active-directory",
+        "forest-trust",
+        "domain-admin",
+        "lateral-movement"
+      ]
+    },
+    {
+      "id": "PE-008",
+      "slug": "ssh-keys-scraped-from-bash-history",
+      "title": "SSH Keys Scraped from Shell History",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-008",
+      "attack_technique_id": "T1552.004",
+      "attack_technique_name": "Unsecured Credentials: Private Keys",
+      "description": "An attacker discovers unencrypted RSA private keys and hardcoded root passwords left inside the cook's '~/.bash_history' file on a shared kitchen management laptop.",
+      "flavor_text": "\"Never store root passwords in shell history? But how else was I supposed to remember that sixty-character gibberish?!\"",
+      "tags": [
+        "ssh",
+        "bash-history",
+        "credential-dump",
+        "plain-text-keys"
+      ]
+    },
+    {
+      "id": "PE-009",
+      "slug": "wmi-lateral-submersible-exec",
+      "title": "WMI Lateral Submersible Execution",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-009",
+      "attack_technique_id": "T1047",
+      "attack_technique_name": "Windows Management Instrumentation",
+      "description": "Using compromised administrative credentials, the adversary invokes 'wmic process call create' over TCP 135 to remotely spawn backdoors on every terminal in the dining hall simultaneously.",
+      "flavor_text": "\"Launching payloads across thirty terminals forty miles away with a single command. WMI is truly the submarine torpedo of sysadmins.\"",
+      "tags": [
+        "wmi",
+        "lateral-movement",
+        "process-creation",
+        "rpc"
+      ]
+    },
+    {
+      "id": "PE-010",
+      "slug": "sudo-misconfiguration-freebsd-grill",
+      "title": "sudo Misconfiguration on FreeBSD Grill",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-010",
+      "attack_technique_id": "T1548.003",
+      "attack_technique_name": "Abuse Elevation Control Mechanism: Sudo and Sudo Caching",
+      "description": "The kitchen display terminal sudoers file contains 'cook ALL=(ALL) NOPASSWD: /usr/bin/find', enabling instant root breakout using find's -exec shell spawn parameter.",
+      "flavor_text": "\"'Let the line cooks restart the grill daemon without bothering IT,' they said. 'What could possibly go wrong?'\"",
+      "tags": [
+        "sudo",
+        "gtfobins",
+        "freebsd",
+        "privilege-escalation"
+      ]
+    },
+    {
+      "id": "PE-011",
+      "slug": "overprivileged-spn-cloud-sync",
+      "title": "Overprivileged SPN Cloud Sync",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-011",
+      "attack_technique_id": "T1098",
+      "attack_technique_name": "Account Manipulation",
+      "description": "An automated kelp syrup inventory application was granted excessive Global Administrator privileges in Azure AD to bypass permission errors during setup.",
+      "flavor_text": "\"Why does the soda dispenser have Global Admin across the entire tenant?! 'Well, it stopped the error popups!'\"",
+      "tags": [
+        "azure-ad",
+        "service-principal",
+        "overprivileged",
+        "cloud-identity"
+      ]
+    },
+    {
+      "id": "PE-012",
+      "slug": "smb-relay-unsigned-subnets",
+      "title": "SMB Relay across Unsigned Subnets",
+      "deck": "pivot_escalate",
+      "type": "pivot_escalate",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PE-012",
+      "attack_technique_id": "T1557.001",
+      "attack_technique_name": "Adversary-in-the-Middle: LLMNR/NBT-NS Poisoning and SMB Relay",
+      "description": "Adversaries intercept broadcast name resolution requests and relay captured NTLMv2 authentication sessions directly to internal file servers lacking SMB signing enforcement.",
+      "flavor_text": "\"Enforce SMB signing? Mr. Krabs calculated the 2% CPU overhead would cost an extra four cents in municipal hydro power per fiscal quarter.\"",
+      "tags": [
+        "smb-relay",
+        "responder",
+        "ntlmv2",
+        "lateral-movement"
+      ]
+    },
+    {
+      "id": "P-001",
+      "slug": "barnacle-registry-run-keys",
+      "title": "Barnacle Registry Run Keys",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-001",
+      "attack_technique_id": "T1547.001",
+      "attack_technique_name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+      "description": "Backdoor persistence entries written into 'HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run' ensure malicious stagers execute automatically every morning when the cash register reboots.",
+      "flavor_text": "\"Like barnacles glued to the hull of an old pirate schooner, these registry entries simply refuse to be scraped off.\"",
+      "tags": [
+        "registry",
+        "run-keys",
+        "startup",
+        "persistence"
+      ]
+    },
+    {
+      "id": "P-002",
+      "slug": "deep-trench-php-web-shell",
+      "title": "Deep Trench PHP Web Shell",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-002",
+      "attack_technique_id": "T1505.003",
+      "attack_technique_name": "Server Software Component: Web Shell",
+      "description": "An obfuscated PHP backdoor disguised as an image asset ('menu_logo.png.php') rests in the public uploads directory of the ordering portal, allowing persistent arbitrary shell execution.",
+      "flavor_text": "\"A tiny script that answers HTTP POST requests with unrestricted root commands. Delicious tartar sauce with a hint of remote access.\"",
+      "tags": [
+        "web-shell",
+        "php",
+        "backdoor",
+        "persistence"
+      ]
+    },
+    {
+      "id": "P-003",
+      "slug": "cron-job-of-the-abyss",
+      "title": "Cron Job of the Abyss",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-003",
+      "attack_technique_id": "T1053.003",
+      "attack_technique_name": "Scheduled Task/Job: Cron",
+      "description": "A stealth cron configuration planted in '/etc/cron.d/patty_backup' wakes up every night at 3:14 AM to check for updated instructions from the Chum Bucket command server.",
+      "flavor_text": "\"Every night while Bikini Bottom sleeps, the deep cron awakens to phone home.\"",
+      "tags": [
+        "cron",
+        "scheduled-task",
+        "linux",
+        "persistence"
+      ]
+    },
+    {
+      "id": "P-004",
+      "slug": "golden-clam-kerberos-ticket",
+      "title": "Golden Clam Kerberos Ticket",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-004",
+      "attack_technique_id": "T1558.001",
+      "attack_technique_name": "Steal or Forge Kerberos Tickets: Golden Ticket",
+      "description": "Armed with the KRBTGT master key hash, the attacker crafts a forged Ticket Granting Ticket valid for ten years, granting omnipotent administrative access across all underwater domains.",
+      "flavor_text": "\"With the Golden Clam ticket in your shell, even King Neptune himself cannot revoke your enterprise administrative permissions.\"",
+      "tags": [
+        "golden-ticket",
+        "krbtgt",
+        "kerberos",
+        "domain-dominance"
+      ]
+    },
+    {
+      "id": "P-005",
+      "slug": "submersible-uefi-bootkit",
+      "title": "Submersible UEFI Bootkit",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-005",
+      "attack_technique_id": "T1542.001",
+      "attack_technique_name": "Pre-OS Boot: System Firmware",
+      "description": "Malicious code flashed directly into the motherboard's SPI chip hooks the UEFI bootloader, surviving operating system wipes, disk replacements, and firmware refreshes.",
+      "flavor_text": "\"You can format the drive ten times over, but the motherboard itself belongs to Plankton now.\"",
+      "tags": [
+        "bootkit",
+        "uefi",
+        "firmware",
+        "low-level-persistence"
+      ]
+    },
+    {
+      "id": "P-006",
+      "slug": "shadow-admin-in-plain-sight",
+      "title": "Shadow Admin in Plain Sight",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-006",
+      "attack_technique_id": "T1136.001",
+      "attack_technique_name": "Create Account: Local Account",
+      "description": "A rogue local account named 'DefaultAccount_Sync' is generated and nested inside obscure non-administrative groups that possess hidden ACL write permissions over the domain root.",
+      "flavor_text": "\"Looks like standard system telemetry to me! Don't look too closely at the creation timestamp.\"",
+      "tags": [
+        "shadow-admin",
+        "account-creation",
+        "active-directory",
+        "acl"
+      ]
+    },
+    {
+      "id": "P-007",
+      "slug": "wmi-event-subscription-beacon",
+      "title": "WMI Event Subscription Beacon",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-007",
+      "attack_technique_id": "T1546.003",
+      "attack_technique_name": "Event Triggered Execution: Windows Management Instrumentation Event Subscription",
+      "description": "A permanent WMI event consumer (__EventFilter / __EventConsumer) is bound to system startup and register close events, re-launching memory-resident implants filelessly.",
+      "flavor_text": "\"No files on disk, no scheduled tasks in the GUI, just an invisible event listener waiting for the till to open.\"",
+      "tags": [
+        "wmi",
+        "fileless",
+        "event-consumer",
+        "stealth-persistence"
+      ]
+    },
+    {
+      "id": "P-008",
+      "slug": "dll-search-order-hijacking-pos",
+      "title": "DLL Search Order Hijacking on POS",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-008",
+      "attack_technique_id": "T1574.001",
+      "attack_technique_name": "Hijack Execution Flow: DLL Search Order Hijacking",
+      "description": "Placing a malicious 'version.dll' into the local installation directory of the Krusty Register application causes the software to load the attacker's DLL before checking System32.",
+      "flavor_text": "\"Windows checks the local folder first! An ancient trick, but the old recipes taste the richest.\"",
+      "tags": [
+        "dll-hijacking",
+        "search-order",
+        "pos",
+        "execution-flow"
+      ]
+    },
+    {
+      "id": "P-009",
+      "slug": "malicious-kitchen-browser-addon",
+      "title": "Malicious Kitchen Browser Extension",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-009",
+      "attack_technique_id": "T1176",
+      "attack_technique_name": "Browser Extensions",
+      "description": "A rogue browser add-on named 'Kelp Recipe Formatter' quietly logs keystrokes, steals session authentication cookies, and reinfects browser profile caches across employee workstations.",
+      "flavor_text": "\"It makes the web page font look like dancing seaweed! What do you mean it's copying my authentication tokens?!\"",
+      "tags": [
+        "browser-extension",
+        "keylogger",
+        "credential-theft",
+        "chrome-extension"
+      ]
+    },
+    {
+      "id": "P-010",
+      "slug": "compromised-subsea-bgp-daemon",
+      "title": "Compromised Subsea BGP Routing Daemon",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-010",
+      "attack_technique_id": "T1565.002",
+      "attack_technique_name": "Data Manipulation: Transmitted Data Manipulation",
+      "description": "Tainted configuration injected into internal undersea BGP edge routers reroutes core administrative traffic through an adversary-controlled proxy before reaching the destination.",
+      "flavor_text": "\"All internal packets destined for the vault now take a scenic detour through the Chum Bucket industrial park.\"",
+      "tags": [
+        "bgp",
+        "routing",
+        "man-in-the-middle",
+        "infrastructure-persistence"
+      ]
+    },
+    {
+      "id": "P-011",
+      "slug": "systemd-timer-abuse-reef-linux",
+      "title": "Systemd Timer Abuse in Reef Linux",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-011",
+      "attack_technique_id": "T1053.006",
+      "attack_technique_name": "Scheduled Task/Job: Systemd Timers",
+      "description": "A stealth systemd timer unit installed as '/etc/systemd/system/grill-cleanup.timer' executes an obfuscated Python payload every ninety minutes without leaving entries in crontab.",
+      "flavor_text": "\"Sysadmins check crontab every time, but nobody ever inspects systemd timers until the grill starts scanning external subnets.\"",
+      "tags": [
+        "systemd",
+        "linux-persistence",
+        "timers",
+        "systemctl"
+      ]
+    },
+    {
+      "id": "P-012",
+      "slug": "adminsdholder-tampering-active-directory",
+      "title": "AdminSDHolder Tampering in AD",
+      "deck": "persistence",
+      "type": "persistence",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-P-012",
+      "attack_technique_id": "T1078.002",
+      "attack_technique_name": "Valid Accounts: Domain Accounts",
+      "description": "Adversaries add an explicit GenericAll Access Control Entry to the AdminSDHolder object, causing SDProp to automatically restore domain admin permissions every sixty minutes even if revoked.",
+      "flavor_text": "\"You revoke their administrator rights, and sixty minutes later, SDProp cheerfully gives them right back. The gift that keeps on granting.\"",
+      "tags": [
+        "adminsdholder",
+        "sdprop",
+        "active-directory",
+        "persistence"
+      ]
+    },
+    {
+      "id": "C2-001",
+      "slug": "barnacle-dns-tunneling",
+      "title": "Barnacle DNS Tunneling",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-C2-001",
+      "attack_technique_id": "T1071.004",
+      "attack_technique_name": "Application Layer Protocol: DNS",
+      "description": "Chunked pieces of the encrypted Secret Formula are base64-encoded and transmitted as subdomains within high-frequency DNS TXT queries to an authoritative name server in the Chum Bucket.",
+      "flavor_text": "\"Who checks DNS traffic? It's just innocent queries for 78f3a9.ns.chumbucket.biz! Perfectly normal internet usage!\"",
+      "tags": [
+        "dns-tunneling",
+        "iodine",
+        "exfiltration",
+        "c2"
+      ]
+    },
+    {
+      "id": "C2-002",
+      "slug": "encrypted-cloud-trench-s3-transfer",
+      "title": "Encrypted Cloud Trench S3 Transfer",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-C2-002",
+      "attack_technique_id": "T1567.002",
+      "attack_technique_name": "Exfiltration Over Web Service: Exfiltration to Cloud Storage",
+      "description": "A compressed and encrypted 4GB archive of proprietary recipe files and kitchen telemetry is streamed directly to an external AWS S3 bucket over standard TLS port 443.",
+      "flavor_text": "\"It's encrypted over HTTPS to a major cloud provider! Our legacy firewall thinks someone is just streaming very high-resolution jellyfish documentaries!\"",
+      "tags": [
+        "cloud-exfil",
+        "s3",
+        "https",
+        "data-exfiltration"
+      ]
+    },
+    {
+      "id": "C2-003",
+      "slug": "red-snapper-pos-ransomware",
+      "title": "Red Snapper POS Ransomware",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-C2-003",
+      "attack_technique_id": "T1486",
+      "attack_technique_name": "Data Encrypted for Impact",
+      "description": "Cryptographically locks all restaurant point-of-sale registers and order databases thirty minutes before Friday lunch rush, demanding 50,000 Barnacle Bitcoins for the decryption key.",
+      "flavor_text": "\"'YOUR FORMULA HAS BEEN ENCRYPTED BY RED SNAPPER. SEND 50,000 BITCOINS OR THE SECRET RECIPE GOES PUBLIC.' Mr. Krabs collapsed immediately.\"",
+      "tags": [
+        "ransomware",
+        "encryption",
+        "pos-outage",
+        "financial-impact"
+      ]
+    },
+    {
+      "id": "C2-004",
+      "slug": "jellyfish-steganography-social",
+      "title": "Jellyfish Steganography on Ocean Social",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-C2-004",
+      "attack_technique_id": "T1001.002",
+      "attack_technique_name": "Data Obfuscation: Steganography",
+      "description": "Stolen formula ingredients are embedded within the least significant color bits of ordinary PNG photos of jellyfish posted to public social media accounts, bypassing Data Loss Prevention.",
+      "flavor_text": "\"What a lovely photo of a pink jellyfish! Too bad the blue pixel channels contain the entire secret sauce spice ratios.\"",
+      "tags": [
+        "steganography",
+        "dlp-bypass",
+        "covert-channel",
+        "social-media"
+      ]
+    },
+    {
+      "id": "C2-005",
+      "slug": "slow-and-low-sonar-icmp-exfil",
+      "title": "Slow-and-Low Sonar ICMP Exfil",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-C2-005",
+      "attack_technique_id": "T1095",
+      "attack_technique_name": "Non-Application Layer Protocol",
+      "description": "Exfiltrates recipe fragments hidden in the payload fields of ICMP Echo Request packets disguised as routine sub-sea hydro-acoustic network latency pings.",
+      "flavor_text": "\"Ping... ping... ping... Each sonar ping carries two bytes of secret sauce ingredients past the perimeter firewall.\"",
+      "tags": [
+        "icmp",
+        "sonar",
+        "low-and-slow",
+        "covert-exfil"
+      ]
+    },
+    {
+      "id": "C2-006",
+      "slug": "telegram-bot-c2-ocean-satellite",
+      "title": "Telegram Bot C2 via Ocean Satellite",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-C2-006",
+      "attack_technique_id": "T1102.002",
+      "attack_technique_name": "Web Service: Bidirectional Communication",
+      "description": "Implanted malware polls a private Telegram group chat over HTTPS, parsing commands formatted as innocent undersea emojis to initiate remote actions.",
+      "flavor_text": "\"Plankton controls his entire botnet with emojis in a group chat. A smiling crab emoji means wipe the hard drive.\"",
+      "tags": [
+        "telegram",
+        "c2",
+        "web-service",
+        "emoji-c2"
+      ]
+    },
+    {
+      "id": "C2-007",
+      "slug": "subsea-cable-fiber-tapping",
+      "title": "Subsea Cable Fiber Tapping",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-C2-007",
+      "attack_technique_id": "T1041",
+      "attack_technique_name": "Exfiltration Over C2 Channel",
+      "description": "An optical tap physically clamped to the main underwater fiber trunk bends the cable to siphon off light photons, capturing unencrypted cross-branch backup traffic.",
+      "flavor_text": "\"Why hack through fortified firewalls when you can bend the fiber cable and listen to the photons spilling into the sea?\"",
+      "tags": [
+        "fiber-tap",
+        "hardware",
+        "sniffing",
+        "physical-exfil"
+      ]
+    },
+    {
+      "id": "C2-008",
+      "slug": "fast-flux-chum-proxy-network",
+      "title": "Fast Flux Chum Proxy Network",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-C2-008",
+      "attack_technique_id": "T1568.002",
+      "attack_technique_name": "Dynamic Resolution: Fast Flux DNS",
+      "description": "Rapidly rotating DNS A records for the C2 domain every ninety seconds across hundreds of compromised undersea IoT devices to prevent IP blacklisting.",
+      "flavor_text": "\"Every time the SOC blocks an IP address, twenty more compromised kitchen blenders take its place. The hydra of command and control.\"",
+      "tags": [
+        "fast-flux",
+        "botnet",
+        "dns",
+        "evasion"
+      ]
+    },
+    {
+      "id": "C2-009",
+      "slug": "dead-drop-resolvers-paste-sites",
+      "title": "Dead Drop Resolvers on Paste Sites",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-C2-009",
+      "attack_technique_id": "T1102.001",
+      "attack_technique_name": "Web Service: Dead Drop Resolver",
+      "description": "Implants discover current active C2 server IP addresses by querying public paste repositories and code snippets obfuscated using simple base64 rot13 ciphers.",
+      "flavor_text": "\"Leaving encrypted instructions on public bulletin boards. Simple, effective, and nearly impossible to take down without blocking entire developer sites.\"",
+      "tags": [
+        "dead-drop",
+        "pastebin",
+        "github-gist",
+        "c2-resolution"
+      ]
+    },
+    {
+      "id": "C2-010",
+      "slug": "kelp-mail-drafts-covert-exfil",
+      "title": "Kelp-Mail Drafts Covert Exfiltration",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-C2-010",
+      "attack_technique_id": "T1078",
+      "attack_technique_name": "Valid Accounts",
+      "description": "Adversaries exfiltrate data by saving stolen text chunks inside unsent drafts of a shared webmail account, completely avoiding outbound email inspection filters.",
+      "flavor_text": "\"No emails were ever sent over the wire! The attacker logged in from outside and read the saved drafts folder directly. Zero perimeter alerts.\"",
+      "tags": [
+        "webmail-drafts",
+        "covert-exfil",
+        "perimeter-bypass",
+        "stealth"
+      ]
+    },
+    {
+      "id": "C2-011",
+      "slug": "encrypted-discord-webhook-drop",
+      "title": "Encrypted Discord Webhook Drop",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-C2-011",
+      "attack_technique_id": "T1567.002",
+      "attack_technique_name": "Exfiltration Over Web Service: Exfiltration to Cloud Storage",
+      "description": "Malware packages stolen cashier credentials and memory hashes, posting them directly into an external Discord channel using standard incoming HTTPS webhooks.",
+      "flavor_text": "\"A cheerful notification chime in Plankton's Discord server announces the delivery of the shift manager's master access keys.\"",
+      "tags": [
+        "discord-webhook",
+        "https-exfil",
+        "cloud-drop",
+        "c2"
+      ]
+    },
+    {
+      "id": "C2-012",
+      "slug": "wiping-pos-disks-chum-wiper",
+      "title": "Wiping POS Disks with Chum Wiper",
+      "deck": "c2_exfil",
+      "type": "c2_exfil",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-C2-012",
+      "attack_technique_id": "T1561.002",
+      "attack_technique_name": "Disk Wipe",
+      "description": "As a final disruptive diversion, threat actors deploy destructive disk-wiping payloads that overwrite master boot records across all restaurant POS systems with raw chum data.",
+      "flavor_text": "\"If Plankton can't have the secret formula, nobody gets to run a register in this town ever again.\"",
+      "tags": [
+        "disk-wiper",
+        "mbr-corruption",
+        "destructive-malware",
+        "outage"
+      ]
+    },
+    {
+      "id": "PR-001",
+      "slug": "endpoint-memory-forensics-volatility",
+      "title": "Endpoint Memory Forensics",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PR-001",
+      "d20_threshold": 11,
+      "procedure_category": "Endpoint",
+      "description": "Acquire and analyze volatile RAM dumps from compromised cashier terminals using subsea Volatility to extract injected code and hooked APIs. Success on 11+ identifies in-memory processes; 15+ dumps unpacked malware.",
+      "flavor_text": "\"Scouring volatile RAM for process hollowing before Mr. Krabs powers down the workstation to save two cents of electricity.\"",
+      "tags": [
+        "volatility",
+        "memory-forensics",
+        "endpoint",
+        "ram-dump"
+      ]
+    },
+    {
+      "id": "PR-002",
+      "slug": "autopsy-disk-forensics",
+      "title": "Autopsy Disk Forensics",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PR-002",
+      "d20_threshold": 12,
+      "procedure_category": "Endpoint",
+      "description": "Mount bitstream forensic disk images in write-blocking mode to reconstruct deleted files, examine Master File Tables ($MFT), and analyze shimcache execution artifacts. Success on 12+ traces dropper paths.",
+      "flavor_text": "\"Every deleted file leaves a scar in the file system. Let's see what Plankton tried to sweep under the kitchen rug.\"",
+      "tags": [
+        "disk-forensics",
+        "autopsy",
+        "mft",
+        "write-blocker"
+      ]
+    },
+    {
+      "id": "PR-003",
+      "slug": "network-packet-inspection-zeek",
+      "title": "Network Packet Inspection (Zeek & Wireshark)",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PR-003",
+      "d20_threshold": 11,
+      "procedure_category": "Network",
+      "description": "Deploy deep packet inspection on core VLAN fiber taps using Zeek and Wireshark to isolate beacon intervals and decode unencrypted protocol payloads. Success on 11+ confirms C2 IPs; 14+ extracts exfiltrated data.",
+      "flavor_text": "\"Filtering out thousands of streaming video packets from the dining room to find the single whisper beaconing to the abyss.\"",
+      "tags": [
+        "wireshark",
+        "zeek",
+        "pcap",
+        "packet-analysis"
+      ]
+    },
+    {
+      "id": "PR-004",
+      "slug": "barnacle-siem-log-correlation",
+      "title": "Barnacle SIEM Log Correlation",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PR-004",
+      "d20_threshold": 11,
+      "procedure_category": "Log Analysis",
+      "description": "Aggregate and correlate Windows Security Event Logs (IDs 4624, 4688, 7045) and firewall connection logs into Splunk to establish an exact incident timeline. Success on 11+ reconstructs lateral path.",
+      "flavor_text": "\"Connecting the dots between a suspicious login at 2:00 AM and a deep fryer that suddenly spoke fluent Russian.\"",
+      "tags": [
+        "siem",
+        "splunk",
+        "log-correlation",
+        "event-logs"
+      ]
+    },
+    {
+      "id": "PR-005",
+      "slug": "rapid-host-isolation-quarantine",
+      "title": "Rapid Host Isolation & Quarantine",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-PR-005",
+      "d20_threshold": 12,
+      "procedure_category": "Technical Controls",
+      "description": "Dispatch EDR network containment commands to isolate the infected terminal from the restaurant subnet while maintaining an encrypted administrative channel for forensic triage. Success on 12+ halts lateral spread.",
+      "flavor_text": "\"Drop the digital blast doors! Cut the infected cashier terminal off from the rest of the reef!\"",
+      "tags": [
+        "edr",
+        "containment",
+        "host-isolation",
+        "quarantine"
+      ]
+    },
+    {
+      "id": "PR-006",
+      "slug": "domain-credential-reset-kerberos-purge",
+      "title": "Domain Credential Reset & Kerberos Purge",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-PR-006",
+      "d20_threshold": 14,
+      "procedure_category": "Technical Controls",
+      "description": "Execute a coordinated dual password reset of the krbtgt account across all domain controllers to invalidate forged Golden Tickets, accompanied by enterprise-wide user password rotation. Success on 14+ evicts attacker persistence.",
+      "flavor_text": "\"Resetting the krbtgt account twice: the cybersecurity equivalent of performing an exorcism on the entire ocean floor.\"",
+      "tags": [
+        "krbtgt",
+        "golden-ticket-purge",
+        "password-rotation",
+        "active-directory"
+      ]
+    },
+    {
+      "id": "PR-007",
+      "slug": "threat-intelligence-apt-chum-attribution",
+      "title": "Threat Intel & APT-Chum Attribution",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PR-007",
+      "d20_threshold": 10,
+      "procedure_category": "Threat Intelligence",
+      "description": "Query oceanic threat intelligence feeds and MISP repositories to correlate observed malware hashes, compile timestamps, and infrastructure with known Plankton APT campaigns. Success on 10+ unmasks TTPs.",
+      "flavor_text": "\"Compile timestamps on the malware match Plankton's lunch hour. Nobody else writes x86 assembly code with this much spite.\"",
+      "tags": [
+        "threat-intel",
+        "misp",
+        "attribution",
+        "apt-chum"
+      ]
+    },
+    {
+      "id": "PR-008",
+      "slug": "reverse-engineering-droppers-ghidra",
+      "title": "Reverse Engineering Droppers (Ghidra)",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PR-008",
+      "d20_threshold": 14,
+      "procedure_category": "Endpoint",
+      "description": "Decompile and analyze packed subsea executable binaries in Ghidra to reconstruct control flow graphs, decode XOR-obfuscated strings, and extract hardcoded C2 IPs. Success on 14+ yields C2 addresses and decryptor keys.",
+      "flavor_text": "\"Peeling back seven layers of custom underwater binary packers until the raw shellcode yields its secrets.\"",
+      "tags": [
+        "ghidra",
+        "reverse-engineering",
+        "malware-analysis",
+        "decompilation"
+      ]
+    },
+    {
+      "id": "PR-009",
+      "slug": "firewall-egress-rule-hardening",
+      "title": "Firewall Egress Rule Hardening",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-PR-009",
+      "d20_threshold": 12,
+      "procedure_category": "Technical Controls",
+      "description": "Lock down perimeter firewall egress rules, restricting outbound traffic to approved enterprise endpoints and blocking non-standard DNS, ICMP, and SSH outbound channels. Success on 12+ severs active C2 channels.",
+      "flavor_text": "\"Sealing every exhaust port on the fortress. If it isn't port 443 to an authorized partner, it doesn't leave the kitchen.\"",
+      "tags": [
+        "firewall",
+        "egress-filtering",
+        "perimeter-defense",
+        "c2-block"
+      ]
+    },
+    {
+      "id": "PR-010",
+      "slug": "cloud-iam-audit-spn-revocation",
+      "title": "Cloud IAM Audit & SPN Revocation",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-PR-010",
+      "d20_threshold": 13,
+      "procedure_category": "Technical Controls",
+      "description": "Perform a comprehensive audit of cloud service principals, OAuth consent grants, and conditional access policies, stripping excessive tenant roles. Success on 13+ removes cloud backdoors.",
+      "flavor_text": "\"Revoking the soda dispenser's Global Admin rights before it grants multi-tenant access to the entire Chum Bucket.\"",
+      "tags": [
+        "cloud-security",
+        "iam",
+        "azure-ad",
+        "spn-revocation"
+      ]
+    },
+    {
+      "id": "PR-011",
+      "slug": "undersea-honeypot-deployment",
+      "title": "Undersea Honeypot Deployment",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PR-011",
+      "d20_threshold": 11,
+      "procedure_category": "Threat Intelligence",
+      "description": "Deploy high-interaction decoy servers mimicking the Krusty Krab formula database to trap adversary automated tools and record zero-day exploitation attempts. Success on 11+ captures attacker payloads.",
+      "flavor_text": "\"A decoy safe labeled 'Super Secret Formula Inside'. Plankton literally cannot resist opening it.\"",
+      "tags": [
+        "honeypot",
+        "deception",
+        "canary",
+        "payload-capture"
+      ]
+    },
+    {
+      "id": "PR-012",
+      "slug": "executive-legal-pr-mitigation",
+      "title": "Executive & Legal PR Mitigation",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Post-Incident Activity",
+      "art_id": "ART-PR-012",
+      "d20_threshold": 13,
+      "procedure_category": "Executive & Legal",
+      "description": "Coordinate mandatory breach notification disclosures with maritime regulatory bodies while managing press inquiries and preventing the CEO from firing the SOC to cut payroll. Success on 13+ prevents regulatory fines.",
+      "flavor_text": "\"Drafting the public announcement: 'No customer patties were harmed during the unauthorized data consultation event.'\"",
+      "tags": [
+        "pr",
+        "legal",
+        "compliance",
+        "regulatory-disclosure"
+      ]
+    },
+    {
+      "id": "PR-013",
+      "slug": "clean-golden-master-restoration",
+      "title": "Clean Golden Master Restoration",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-PR-013",
+      "d20_threshold": 13,
+      "procedure_category": "Technical Controls",
+      "description": "Reimage compromised registers and servers from verified, offline immutable golden images, restoring operational capabilities without reintroducing malware. Success on 13+ restores endpoints to clean baseline.",
+      "flavor_text": "\"Nuke it from sub-orbit. It's the only way to be completely sure there are no microscopic Plankton implants left in the registry.\"",
+      "tags": [
+        "reimage",
+        "golden-image",
+        "baseline",
+        "recovery"
+      ]
+    },
+    {
+      "id": "PR-014",
+      "slug": "deep-sea-netflow-baselining",
+      "title": "Deep-Sea Netflow Baselining",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-PR-014",
+      "d20_threshold": 11,
+      "procedure_category": "Network",
+      "description": "Establish statistical baseline NetFlow and IPFIX traffic metrics across all restaurant VLANs to instantly identify abnormal bandwidth spikes and unexpected egress tunnels. Success on 11+ detects exfiltration channels.",
+      "flavor_text": "\"When the kitchen display terminal suddenly uploads 40 gigabytes of data to an IP in the Mariana Trench, the baseline alarms sing.\"",
+      "tags": [
+        "netflow",
+        "anomaly-detection",
+        "traffic-analysis",
+        "baseline"
+      ]
+    },
+    {
+      "id": "PR-015",
+      "slug": "privileged-account-scrub-mfa",
+      "title": "Privileged Account Scrub & MFA",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-PR-015",
+      "d20_threshold": 12,
+      "procedure_category": "Technical Controls",
+      "description": "Strip unneeded local administrative rights from employee accounts, enforce phishing-resistant FIDO2 hardware keys, and configure strict session timeouts. Success on 12+ locks down lateral movement.",
+      "flavor_text": "\"'From now on, everyone needs a physical security key to touch the cash register—even you, Squidward!' 'Oh joy.'\"",
+      "tags": [
+        "mfa",
+        "fido2",
+        "least-privilege",
+        "identity-hardening"
+      ]
+    },
+    {
+      "id": "PR-016",
+      "slug": "after-action-root-cause-post-mortem",
+      "title": "After-Action Root Cause Post-Mortem",
+      "deck": "procedures",
+      "type": "procedures",
+      "nist_phase": "Post-Incident Activity",
+      "art_id": "ART-PR-016",
+      "d20_threshold": 10,
+      "procedure_category": "Executive & Legal",
+      "description": "Conduct a blameless engineering post-mortem to map out the attack chain, document control failures, update response playbooks, and secure executive budget for permanent fixes. Success on 10+ closes incident with lessons learned.",
+      "flavor_text": "\"We survived the incident, contained the breach, and all it cost was six gray hairs and twenty cents of overtime pay.\"",
+      "tags": [
+        "post-mortem",
+        "lessons-learned",
+        "root-cause",
+        "aar"
+      ]
+    },
+    {
+      "id": "INJ-001",
+      "slug": "squidwards-shift-ended",
+      "title": "Squidward's Shift Ended",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Preparation",
+      "art_id": "ART-INJ-001",
+      "modifiers": {
+        "difficulty_modifier": 3,
+        "duration": "next_2_checks",
+        "applies_to": "all_procedures"
+      },
+      "description": "The senior incident responder clocks out at precisely 5:00 PM, silences their shell phone, and refuses to respond to high-severity pager alerts. Add +3 difficulty to the next 2 procedure checks.",
+      "flavor_text": "\"My employment contract explicitly stipulates my shift ends at five. If the restaurant network is burning, call someone who gets paid more than me.\"",
+      "tags": [
+        "shift-change",
+        "responder-unavailable",
+        "friction",
+        "apathy"
+      ]
+    },
+    {
+      "id": "INJ-002",
+      "slug": "mr-krabs-screams-electric-bill",
+      "title": "Mr. Krabs Screams About Electric Bill",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Preparation",
+      "art_id": "ART-INJ-002",
+      "modifiers": {
+        "turn_loss": 1,
+        "duration": "immediate",
+        "applies_to": "players"
+      },
+      "description": "The CEO storms into the security operations center and physically unplugs the secondary monitor wall to save four cents an hour on power. The defenders forfeit 1 player turn.",
+      "flavor_text": "\"Seven monitors for one crab?! Are you trying to drive me to the poorhouse?! One screen is plenty for reading the matrix!\"",
+      "tags": [
+        "executive-meddling",
+        "budget-cut",
+        "turn-loss",
+        "power"
+      ]
+    },
+    {
+      "id": "INJ-003",
+      "slug": "over-enthusiastic-spongebob-containment",
+      "title": "Over-Enthusiastic Spongebob Containment",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-INJ-003",
+      "modifiers": {
+        "strike_cost": 2,
+        "duration": "immediate",
+        "applies_to": "strike_counter"
+      },
+      "description": "An eager junior analyst takes 'network isolation' too literally and severs the main undersea fiber conduit with a pair of kitchen shears. Immediately add 2 strikes to the doom counter.",
+      "flavor_text": "\"I severed the connection just like you asked, Captain! Look, the malicious packets can't get in anymore! ...Or anything else!\"",
+      "tags": [
+        "accidental-outage",
+        "cable-cut",
+        "strikes",
+        "human-error"
+      ]
+    },
+    {
+      "id": "INJ-004",
+      "slug": "health-inspector-surprise-audit",
+      "title": "Health Inspector Surprise Audit",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-INJ-004",
+      "modifiers": {
+        "difficulty_modifier": 2,
+        "duration": "next_check",
+        "applies_to": "all_procedures"
+      },
+      "description": "Government sanitation regulators arrive unannounced with clipboards and flashlights, demanding compliance documents while active ransomware is detonating. Add +2 difficulty to the next procedure check.",
+      "flavor_text": "\"Why are there loose Ethernet cables draped over the tartar sauce vat?! That's an immediate Class-C sanitation infraction!\"",
+      "tags": [
+        "audit",
+        "compliance",
+        "distraction",
+        "regulatory"
+      ]
+    },
+    {
+      "id": "INJ-005",
+      "slug": "backups-on-sunken-tape",
+      "title": "Backups on Sunken Underwater Tape",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-INJ-005",
+      "modifiers": {
+        "strike_cost": 1,
+        "difficulty_modifier": 2,
+        "duration": "next_procedure",
+        "applies_to": "Technical Controls"
+      },
+      "description": "The magnetic backup tapes are completely uncorrupted, but the storage safe was accidentally dropped into the Mariana Trench. Add 1 strike and +2 difficulty to the next Technical Controls procedure.",
+      "flavor_text": "\"Good news: our offline backups are 100% verified. Bad news: they're currently resting six miles deep at 1,000 atmospheres of pressure.\"",
+      "tags": [
+        "backup-failure",
+        "physical-loss",
+        "strikes",
+        "recovery-friction"
+      ]
+    },
+    {
+      "id": "INJ-006",
+      "slug": "social-media-panic-ocean-twitter",
+      "title": "Social Media Panic on Ocean Twitter",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Post-Incident Activity",
+      "art_id": "ART-INJ-006",
+      "modifiers": {
+        "difficulty_modifier": 3,
+        "duration": "next_check",
+        "applies_to": "Executive & Legal"
+      },
+      "description": "A patron streams live video of an encrypted register screen to undersea social media, causing widespread panic and a flood of refund demands. Add +3 difficulty to the next Executive & Legal check.",
+      "flavor_text": "\"#KrustyBreach is trending number one across the ocean! Thousands of customers are demanding their credit clams back!\"",
+      "tags": [
+        "pr-disaster",
+        "social-media",
+        "leak",
+        "panic"
+      ]
+    },
+    {
+      "id": "INJ-007",
+      "slug": "expired-ssl-cert-from-2012",
+      "title": "Expired SSL Certificate from 2012",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-INJ-007",
+      "modifiers": {
+        "difficulty_modifier": 2,
+        "duration": "next_check",
+        "applies_to": "Network"
+      },
+      "description": "Internal diagnostic tooling abruptly drops offline when a ten-year self-signed SSL certificate quietly expires in the middle of active packet analysis. Add +2 difficulty to the next Network check.",
+      "flavor_text": "\"A ten-year certificate was five dollars cheaper than annual auto-renewal! yelled Mr. Krabs from behind a mountain of receipts.\"",
+      "tags": [
+        "ssl-expiry",
+        "pki",
+        "certificate",
+        "outage"
+      ]
+    },
+    {
+      "id": "INJ-008",
+      "slug": "junior-analyst-rm-rf-syslog",
+      "title": "Junior Analyst Runs rm -rf on Syslog",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-INJ-008",
+      "modifiers": {
+        "strike_cost": 1,
+        "difficulty_modifier": 3,
+        "duration": "next_check",
+        "applies_to": "Log Analysis"
+      },
+      "description": "Attempting to free up disk space on the logging server, a junior analyst accidentally deletes '/var/log/syslog' and clears the central ingestion queue. Add 1 strike and +3 difficulty to the next Log Analysis check.",
+      "flavor_text": "\"The disk was at 99%! I thought log files were just temporary scratch notes!\"",
+      "tags": [
+        "rm-rf",
+        "log-deletion",
+        "accidental-evidence-destruction",
+        "strikes"
+      ]
+    },
+    {
+      "id": "INJ-009",
+      "slug": "karen-ai-counter-measures",
+      "title": "Karen AI Deploys Counter-Measures",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-INJ-009",
+      "modifiers": {
+        "difficulty_modifier": 2,
+        "duration": "next_2_checks",
+        "applies_to": "all_procedures"
+      },
+      "description": "The Chum Bucket's supercomputer Karen launches automated polymorphic obfuscation routines, re-encrypting malicious payloads with fresh keys every sixty seconds. Add +2 difficulty to the next 2 procedure checks.",
+      "flavor_text": "\"Oh Sheldon, did you really think their underfunded SOC wouldn't notice a static hash? Let mama handle the polymorphic engine.\"",
+      "tags": [
+        "polymorphic",
+        "ai-adversary",
+        "karen",
+        "obfuscation"
+      ]
+    },
+    {
+      "id": "INJ-010",
+      "slug": "sandy-cheeks-scientific-expedition",
+      "title": "Sandy Cheeks on Deep Expedition",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-INJ-010",
+      "modifiers": {
+        "difficulty_modifier": 3,
+        "duration": "next_check",
+        "applies_to": "Endpoint"
+      },
+      "description": "The reef's only certified reverse engineer is miles away in a deep-sea submersible studying geothermal vents and cannot be reached. Add +3 difficulty to the next Endpoint procedure check.",
+      "flavor_text": "\"She's 10,000 leagues under the sea testing mineral rocks! You'll have to read that raw x86 assembly by yourselves!\"",
+      "tags": [
+        "expert-unavailable",
+        "reverse-engineering",
+        "endpoint-penalty"
+      ]
+    },
+    {
+      "id": "INJ-011",
+      "slug": "patrick-star-answers-red-phone",
+      "title": "Patrick Star Answers the Red Phone",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Preparation",
+      "art_id": "ART-INJ-011",
+      "modifiers": {
+        "strike_cost": 1,
+        "turn_loss": 1,
+        "duration": "immediate",
+        "applies_to": "players"
+      },
+      "description": "The emergency incident response hotline rings loudly in the restaurant lobby; an uncertified bystander answers, shouts into the receiver, and hangs up on the incident commander. Suffer 1 strike and lose 1 player action.",
+      "flavor_text": "\"'Is this the Krusty Krab Emergency Response Team?' 'No, this is Patrick!' *slam*\"",
+      "tags": [
+        "emergency-comms-fail",
+        "bystander-interference",
+        "strikes",
+        "turn-loss"
+      ]
+    },
+    {
+      "id": "INJ-012",
+      "slug": "emergency-budget-veto-mr-krabs",
+      "title": "Emergency Budget Veto by Mr. Krabs",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-INJ-012",
+      "modifiers": {
+        "difficulty_modifier": 2,
+        "duration": "next_check",
+        "applies_to": "Technical Controls"
+      },
+      "description": "Mr. Krabs refuses to approve an emergency five-dollar cloud compute expense needed to spin up isolated sandbox containment nodes. Add +2 difficulty to the next Technical Controls check.",
+      "flavor_text": "\"Five whole dollars?! In this fiscal quarter?! You run those memory dumps on that 2004 ThinkPad or you don't run them at all!\"",
+      "tags": [
+        "budget-veto",
+        "penny-pinching",
+        "containment-friction"
+      ]
+    },
+    {
+      "id": "INJ-013",
+      "slug": "bikini-bottom-power-blackout",
+      "title": "Bikini Bottom Rolling Blackout",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Containment, Eradication & Recovery",
+      "art_id": "ART-INJ-013",
+      "modifiers": {
+        "strike_cost": 1,
+        "turn_loss": 1,
+        "duration": "immediate",
+        "applies_to": "players"
+      },
+      "description": "A municipal grid failure plunges the basin into darkness, knocking out unbuffered switches because the UPS batteries were never replaced. Add 1 strike and lose 1 player action.",
+      "flavor_text": "\"UPS batteries need replacing every three years? Mr. Krabs replaced them with pickled kelp jars a decade ago!\"",
+      "tags": [
+        "power-outage",
+        "ups-failure",
+        "infrastructure-crash",
+        "strikes"
+      ]
+    },
+    {
+      "id": "INJ-014",
+      "slug": "anchovy-ddos-traffic-flood",
+      "title": "Anchovy DDoS Traffic Flood",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-INJ-014",
+      "modifiers": {
+        "difficulty_modifier": 3,
+        "duration": "next_check",
+        "applies_to": "Network"
+      },
+      "description": "Thousands of ravenous anchovies spam the online ordering system with millions of rapid requests, completely flooding network taps and obscuring attack telemetry. Add +3 difficulty to the next Network check.",
+      "flavor_text": "\"'Meep! Meep! Meep!' Millions of HTTP GET requests crashing against the firewall like an insatiable tide.\"",
+      "tags": [
+        "ddos",
+        "traffic-flood",
+        "anchovies",
+        "telemetry-blind"
+      ]
+    },
+    {
+      "id": "INJ-015",
+      "slug": "barnacle-ethernet-cable-snaps",
+      "title": "Barnacle Ethernet Cable Snaps",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-INJ-015",
+      "modifiers": {
+        "strike_cost": 1,
+        "duration": "immediate",
+        "applies_to": "strike_counter"
+      },
+      "description": "An ancient, dry-rotted Cat5e network cable running beneath the kitchen floorboards snaps under the weight of an iron spatula bucket. Immediately record 1 strike.",
+      "flavor_text": "\"Physical Layer 1 failure! Someone find the waterproof electrical tape and a can of WD-40!\"",
+      "tags": [
+        "physical-cable-snap",
+        "layer-1-outage",
+        "hardware-fault",
+        "strike"
+      ]
+    },
+    {
+      "id": "INJ-016",
+      "slug": "rogue-copier-cleartext-broadcast",
+      "title": "Rogue Copier Cleartext Broadcast",
+      "deck": "injects",
+      "type": "injects",
+      "nist_phase": "Detection & Analysis",
+      "art_id": "ART-INJ-016",
+      "modifiers": {
+        "difficulty_modifier": 2,
+        "duration": "next_check",
+        "applies_to": "Log Analysis"
+      },
+      "description": "An unconfigured multi-function printer in the back office begins continuously broadcasting scanned administrative documents over open Wi-Fi. Add +2 difficulty to the next Log Analysis check.",
+      "flavor_text": "\"The printer is possessed! It's spewing pages of server passwords directly into the customer dining room!\"",
+      "tags": [
+        "rogue-printer",
+        "cleartext-leak",
+        "wi-fi-broadcast",
+        "noise"
+      ]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "SCN-001",
+      "title": "The Sunday Lunch Rush Ransomware",
+      "difficulty": "Beginner",
+      "briefing": "Thirty minutes before the peak Sunday lunch rush, all POS terminals lock up displaying Red Snapper Ransomware. The attackers entered via an unpatched menu server, escalated using Pass-the-Kelp-Hash, established persistence via Barnacle Registry Run Keys, and encrypted point-of-sale databases. Defenders must isolate endpoints and recover from clean masters before the 10-strike doom clock expires.",
+      "scenario_cards": {
+        "initial_compromise": "IC-002",
+        "pivot_escalate": "PE-001",
+        "persistence": "P-001",
+        "c2_exfil": "C2-003"
+      },
+      "recommended_injects": [
+        "INJ-002",
+        "INJ-004",
+        "INJ-006",
+        "INJ-013"
+      ],
+      "special_rules": "Defenders begin with 1 strike already on the counter due to early customer complaints."
+    },
+    {
+      "id": "SCN-002",
+      "title": "The Scurvy Zero-Day Fryer",
+      "difficulty": "Intermediate",
+      "briefing": "An urgent promotional email with macro chum infected an executive laptop, followed by LOLBins lateral movement, a sneaky Deep Trench PHP web shell in the ordering portal, and covert data exfiltration via Barnacle DNS Tunneling. Plankton is quietly stealing the Secret Formula without triggering noisy alerts.",
+      "scenario_cards": {
+        "initial_compromise": "IC-001",
+        "pivot_escalate": "PE-002",
+        "persistence": "P-002",
+        "c2_exfil": "C2-001"
+      },
+      "recommended_injects": [
+        "INJ-001",
+        "INJ-007",
+        "INJ-009",
+        "INJ-014"
+      ],
+      "special_rules": "Whenever a Network check fails, Plankton exfiltrates an additional chunk of the formula, adding 1 strike."
+    },
+    {
+      "id": "SCN-003",
+      "title": "The Deep-Sea Fiber Espionage",
+      "difficulty": "Advanced",
+      "briefing": "A microscopic physical intrusion through the floor drain allowed hardware taps on the server rack, followed by an Active Directory Trench Forest Compromise, a Golden Clam Kerberos Ticket granting permanent dominion, and physical subsea cable optical tapping. This is a tier-one state-sponsored undersea APT crisis.",
+      "scenario_cards": {
+        "initial_compromise": "IC-004",
+        "pivot_escalate": "PE-007",
+        "persistence": "P-004",
+        "c2_exfil": "C2-007"
+      },
+      "recommended_injects": [
+        "INJ-003",
+        "INJ-005",
+        "INJ-010",
+        "INJ-012"
+      ],
+      "special_rules": "Golden Clam persistence requires a successful Domain Credential Reset (PR-006, d20 14+) twice to fully eradicate."
+    }
+  ]
+}

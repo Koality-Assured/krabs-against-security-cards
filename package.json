@@ -1,0 +1,30 @@
+{
+  "name": "@koality-assured/krabs-against-security-cards",
+  "version": "1.0.0",
+  "description": "Canonical 80-card incident response dataset, JSON schemas, and art manifest for Krabs Against Security",
+  "main": "cards/core-v1/cards.json",
+  "scripts": {
+    "validate": "python tests/test_cards.py",
+    "test": "pytest -v"
+  },
+  "keywords": [
+    "cybersecurity",
+    "incident-response",
+    "backdoors-and-breaches",
+    "mitre-attack",
+    "nist-sp-800-61",
+    "tabletop",
+    "cards",
+    "parody"
+  ],
+  "author": "Koality Assured",
+  "license": "CC-BY-SA-4.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Koality-Assured/krabs-against-security-cards.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Koality-Assured/krabs-against-security-cards/issues"
+  },
+  "homepage": "https://krabs.ketron.dev"
+}

@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://krabs.ketron.dev/schemas/card-schema-v1.json",
+  "title": "KASCard",
+  "description": "Schema for an individual Krabs Against Security incident response card",
+  "type": "object",
+  "required": [
+    "id",
+    "slug",
+    "title",
+    "deck",
+    "type",
+    "description",
+    "flavor_text",
+    "nist_phase",
+    "art_id"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^(IC|PE|P|C2|PR|INJ)-[0-9]{3}$",
+      "description": "Unique card identifier (e.g., IC-001, PR-005)"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "URL and asset friendly kebab-case slug"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 100,
+      "description": "Human-readable display title of the card"
+    },
+    "deck": {
+      "type": "string",
+      "enum": [
+        "initial_compromise",
+        "pivot_escalate",
+        "persistence",
+        "c2_exfil",
+        "procedures",
+        "injects"
+      ],
+      "description": "Deck classification identifier"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "initial_compromise",
+        "pivot_escalate",
+        "persistence",
+        "c2_exfil",
+        "procedures",
+        "injects"
+      ],
+      "description": "Card functional type"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Technical incident response mechanics and narrative context"
+    },
+    "flavor_text": {
+      "type": "string",
+      "minLength": 5,
+      "description": "Humorous satire quote or lore snippet"
+    },
+    "nist_phase": {
+      "type": "string",
+      "enum": [
+        "Preparation",
+        "Detection & Analysis",
+        "Containment, Eradication & Recovery",
+        "Post-Incident Activity"
+      ],
+      "description": "NIST SP 800-61r2 Incident Handling Phase mapping"
+    },
+    "art_id": {
+      "type": "string",
+      "description": "Cross-reference identifier to the art manifest"
+    },
+    "attack_technique_id": {
+      "type": "string",
+      "pattern": "^T1[0-9]{3}(\\.[0-9]{3})?$",
+      "description": "MITRE ATT&CK Enterprise technique ID"
+    },
+    "attack_technique_name": {
+      "type": "string",
+      "description": "Official MITRE ATT&CK Enterprise technique name"
+    },
+    "d20_threshold": {
+      "type": "integer",
+      "minimum": 10,
+      "maximum": 18,
+      "description": "Target roll on a d20 required for procedural success"
+    },
+    "procedure_category": {
+      "type": "string",
+      "enum": [
+        "Endpoint",
+        "Network",
+        "Log Analysis",
+        "Technical Controls",
+        "Threat Intelligence",
+        "Executive & Legal"
+      ],
+      "description": "Specialized domain for defensive procedures"
+    },
+    "modifiers": {
+      "type": "object",
+      "description": "Operational friction modifiers applied by injects",
+      "properties": {
+        "difficulty_modifier": {
+          "type": "integer",
+          "description": "d20 check roll difficulty penalty or bonus"
+        },
+        "strike_cost": {
+          "type": "integer",
+          "description": "Immediate strikes added to the doom clock"
+        },
+        "turn_loss": {
+          "type": "integer",
+          "description": "Actions or player turns forfeited"
+        },
+        "duration": {
+          "type": "string",
+          "description": "Duration over which modifier remains active"
+        },
+        "applies_to": {
+          "type": "string",
+          "description": "Procedure category or action affected"
+        }
+      },
+      "additionalProperties": true
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Categorical tags for filtering and indexing"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "const": "procedures"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "d20_threshold",
+          "procedure_category"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "type": {
+            "enum": [
+              "initial_compromise",
+              "pivot_escalate",
+              "persistence",
+              "c2_exfil"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "attack_technique_id",
+          "attack_technique_name"
+        ]
+      }
+    }
+  ]
+}

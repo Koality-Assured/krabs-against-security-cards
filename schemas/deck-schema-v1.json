@@ -1,0 +1,142 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://krabs.ketron.dev/schemas/deck-schema-v1.json",
+  "title": "KASDeckCollection",
+  "description": "Schema for a Krabs Against Security deck collection and incident scenario pack",
+  "type": "object",
+  "required": [
+    "version",
+    "deck_id",
+    "name",
+    "description",
+    "license",
+    "attribution",
+    "card_counts",
+    "cards"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "SemVer release string of the deck"
+    },
+    "deck_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "Unique slug for this deck collection"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Display name of the card collection"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "description": "Detailed description of the deck theme and contents"
+    },
+    "license": {
+      "type": "string",
+      "enum": ["CC BY-SA 4.0"],
+      "description": "Open content license identifier"
+    },
+    "attribution": {
+      "type": "string",
+      "description": "Mandatory CC BY attribution notice"
+    },
+    "card_counts": {
+      "type": "object",
+      "required": [
+        "initial_compromise",
+        "pivot_escalate",
+        "persistence",
+        "c2_exfil",
+        "procedures",
+        "injects",
+        "total"
+      ],
+      "properties": {
+        "initial_compromise": { "type": "integer", "minimum": 0 },
+        "pivot_escalate": { "type": "integer", "minimum": 0 },
+        "persistence": { "type": "integer", "minimum": 0 },
+        "c2_exfil": { "type": "integer", "minimum": 0 },
+        "procedures": { "type": "integer", "minimum": 0 },
+        "injects": { "type": "integer", "minimum": 0 },
+        "total": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "$ref": "card-schema-v1.json"
+      }
+    },
+    "scenarios": {
+      "type": "array",
+      "description": "Curated tabletop incident response scenarios",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "title",
+          "difficulty",
+          "briefing",
+          "scenario_cards"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^SCN-[0-9]{3}$"
+          },
+          "title": {
+            "type": "string"
+          },
+          "difficulty": {
+            "type": "string",
+            "enum": ["Beginner", "Intermediate", "Advanced", "Nightmare"]
+          },
+          "briefing": {
+            "type": "string"
+          },
+          "scenario_cards": {
+            "type": "object",
+            "required": [
+              "initial_compromise",
+              "pivot_escalate",
+              "persistence",
+              "c2_exfil"
+            ],
+            "properties": {
+              "initial_compromise": {
+                "type": "string",
+                "pattern": "^IC-[0-9]{3}$"
+              },
+              "pivot_escalate": {
+                "type": "string",
+                "pattern": "^PE-[0-9]{3}$"
+              },
+              "persistence": {
+                "type": "string",
+                "pattern": "^P-[0-9]{3}$"
+              },
+              "c2_exfil": {
+                "type": "string",
+                "pattern": "^C2-[0-9]{3}$"
+              }
+            }
+          },
+          "recommended_injects": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^INJ-[0-9]{3}$"
+            }
+          },
+          "special_rules": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://krabs.ketron.dev/schemas/art-manifest-v1.schema.json",
+  "title": "KASArtManifest",
+  "description": "Schema for visual prompts and art generation metadata in the Krabs Against Security 3-Tier Art Pipeline",
+  "type": "object",
+  "required": [
+    "version",
+    "style_preset",
+    "cards"
+  ],
+  "properties": {
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "style_preset": {
+      "type": "object",
+      "required": [
+        "name",
+        "base_prompt",
+        "negative_prompt",
+        "aspect_ratio"
+      ],
+      "properties": {
+        "name": { "type": "string" },
+        "base_prompt": { "type": "string" },
+        "negative_prompt": { "type": "string" },
+        "aspect_ratio": { "type": "string" }
+      }
+    },
+    "cards": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "card_id",
+          "art_id",
+          "title",
+          "deck",
+          "art_status",
+          "prompt",
+          "negative_prompt",
+          "aspect_ratio",
+          "seed",
+          "asset_path",
+          "print_asset_path"
+        ],
+        "properties": {
+          "card_id": {
+            "type": "string",
+            "pattern": "^(IC|PE|P|C2|PR|INJ)-[0-9]{3}$"
+          },
+          "art_id": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "deck": {
+            "type": "string",
+            "enum": [
+              "initial_compromise",
+              "pivot_escalate",
+              "persistence",
+              "c2_exfil",
+              "procedures",
+              "injects"
+            ]
+          },
+          "art_status": {
+            "type": "string",
+            "enum": [
+              "deferred",
+              "queued",
+              "generating",
+              "review_needed",
+              "approved",
+              "rejected"
+            ]
+          },
+          "prompt": {
+            "type": "string",
+            "minLength": 20
+          },
+          "negative_prompt": {
+            "type": "string"
+          },
+          "aspect_ratio": {
+            "type": "string",
+            "enum": ["4:3", "3:4", "1:1", "16:9"]
+          },
+          "seed": {
+            "type": "integer"
+          },
+          "asset_path": {
+            "type": "string"
+          },
+          "print_asset_path": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

@@ -12,8 +12,8 @@
 
 [![CI](https://github.com/Koality-Assured/krabs-against-security-cards/actions/workflows/ci.yml/badge.svg)](https://github.com/Koality-Assured/krabs-against-security-cards/actions/workflows/ci.yml)
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC_BY--SA_4.0-lightgrey.svg)](LICENSE)
-[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](pyproject.toml)
-[![Domain: Tabletop-Security](https://img.shields.io/badge/domain-tabletop-security-blueviolet.svg)]()
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](#)
+[![Domain: Tabletop-Security](https://img.shields.io/badge/domain-tabletop--security-blueviolet.svg)](#)
 [![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-yellow.svg)](https://conventionalcommits.org)
 
 </div>

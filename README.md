@@ -20,7 +20,7 @@
 
 ---
 
-**Krabs Against Security (K.A.S.)** is an open-source, web-native and print-and-play cybersecurity incident response card game. It adapts the proven tabletop mechanics of Black Hills Information Security's (BHIS) [*Backdoors & Breaches*](https://www.blackhillsinfosec.com/projects/backdoors-and-breaches/) into an undersea corporate parody setting featuring the Krusty Krab SOC defending the Secret Formula against the Plankton Advanced Persistent Threat (APT-Chum).
+**Krabs Against Security (K.A.S.)** is an open-source, web-native and print-and-play cybersecurity incident response card game. It adapts the proven tabletop mechanics of Black Hills Information Security's (BHIS) [*Backdoors & Breaches*](https://backdoorsandbreaches.com/) into an undersea corporate parody setting featuring the Krusty Krab SOC defending the Secret Formula against the Plankton Advanced Persistent Threat (APT-Chum).
 This repository serves as the canonical headless data package, schema authority, and visual generation manifest for the K.A.S. ecosystem.
 ---
 ## 1. Incident Response Framework Alignment
